@@ -21,6 +21,7 @@ class Card extends IyzipayResource
     private $cardFamily;
     private $cardBankCode;
     private $cardBankName;
+    private $lastFourDigits;
 
     public static function create(CreateCardRequest $request, Options $options)
     {
@@ -142,5 +143,15 @@ class Card extends IyzipayResource
     public function setCardBankName($cardBankName)
     {
         $this->cardBankName = $cardBankName;
+    }
+
+    public function getLastFourDigits()
+    {
+        return $this->lastFourDigits;
+    }
+
+    public function setLastFourDigits($lastFourDigits)
+    {
+        $this->lastFourDigits = $lastFourDigits;
     }
 }
